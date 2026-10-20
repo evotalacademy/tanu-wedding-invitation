@@ -1,0 +1,134 @@
+/* ============================================================
+   WEDDING INVITATION — CONFIG (Tanu's side)
+   ------------------------------------------------------------
+   This is the ONLY file you need to edit to update names,
+   dates, venues, addresses or colours. Everything else reads
+   from here. Keep the structure the same — just change the
+   text inside the quotes.
+   ============================================================ */
+
+const WEDDING_CONFIG = {
+
+  couple: {
+    groom: "Dhiraj",
+    bride: "Tanu",
+    groomHi: "धीरज",
+    brideHi: "तनु"
+  },
+
+  parents: {
+    en: {
+      groomLine: "S/o Shri Markandey & Chandrashila Devi",
+      brideLine: "D/o Shri Sudhir & Santosh Devi"
+    },
+    hi: {
+      groomLine: "पुत्र श्री मारकंडेय एवं चंद्रशीला देवी",
+      brideLine: "पुत्री श्री सुधीर एवं संतोष देवी"
+    }
+  },
+
+  // Google Maps destination for the wedding venue — the supplied share link,
+  // used directly (not rebuilt from a text query).
+  venueMapUrl: "https://share.google/B2vwpaK1TmQzatIac",
+
+  // Tanu's side home events (Haldi, Bhoj, Mehndi & Sangeet) are all held
+  // at home in Jansath — no fuller postal address was supplied.
+  homeAddress: {
+    en: "Jansath",
+    hi: "जानसठ"
+  },
+
+  events: {
+    haldi: {
+      title: { en: "Haldi", hi: "हल्दी" },
+      date: { en: "29 November 2026", hi: "29 नवंबर 2026" },
+      day: { en: "Sunday", hi: "रविवार" },
+      time: { en: "3:00 PM", hi: "दोपहर 3:00 बजे" },
+      venue: { en: "At Home", hi: "निवास स्थान पर" },
+      address: null // filled from homeAddress at render time
+    },
+    bhoj: {
+      title: { en: "Bhoj", hi: "भोज" },
+      date: { en: "30 November 2026", hi: "30 नवंबर 2026" },
+      day: { en: "Monday", hi: "सोमवार" },
+      time: { en: "12:00 PM", hi: "दोपहर 12:00 बजे" },
+      venue: { en: "At Home", hi: "निवास स्थान पर" },
+      address: null
+    },
+    mehndi: {
+      title: { en: "Mehndi & Sangeet", hi: "मेहंदी एवं संगीत" },
+      date: { en: "30 November 2026", hi: "30 नवंबर 2026" },
+      day: { en: "Monday", hi: "सोमवार" },
+      time: { en: "", hi: "" }, // intentionally no time specified
+      venue: { en: "At Home", hi: "निवास स्थान पर" },
+      address: null
+    },
+    wedding: {
+      title: { en: "Shubh Vivah", hi: "शुभ विवाह" },
+      date: { en: "2 December 2026", hi: "2 दिसंबर 2026" },
+      day: { en: "Wednesday", hi: "बुधवार" },
+      time: { en: "5:00 PM", hi: "शाम 5:00 बजे" },
+      venue: { en: "Tejashvi Palace", hi: "तेजस्वी पैलेस" },
+      address: {
+        en: "Lar Bazar Thana Road, Deoria Salempur Rd, 274502",
+        hi: "लार बाजार थाना रोड, देवरिया सलेमपुर रोड, 274502"
+      }
+    }
+  },
+
+  littleStars: {
+    names: ["Arnika", "Anik"],
+    namesHi: ["अर्णिका", "अनिक"]
+  },
+
+  // ICS calendar file content is generated from this (see script.js).
+  calendarEvent: {
+    title: "Dhiraj & Tanu — Shubh Vivah",
+    location: "Tejashvi Palace, Lar Bazar Thana Road, Deoria Salempur Rd, 274502",
+    // Wall-clock start of the wedding, IST. Used only for the calendar file
+    // (there is no on-screen countdown).
+    startISTOffset: "2026-12-02T17:00:00+05:30",
+    durationHours: 4
+  },
+
+  // Shown as a small, static line on the final screen — not a form or
+  // RSVP system, just contact numbers for guests with questions.
+  contacts: [
+    { name: "Santosh", phone: "9220270675" },
+    { name: "Tanu", phone: "8279360407" },
+    { name: "Kuldeep", phone: "9557266439" }
+  ],
+
+  copy: {
+    en: {
+      ganesha: "Shri Ganeshay Namah",
+      openingBlessing: "With the blessings of our families",
+      tapToContinue: "Swipe up",
+      openMaps: "View Venue",
+      addCalendar: "Add to Calendar",
+      finalBlessing: "Your presence will make\nour special day even more meaningful.",
+      withLove: "With Love,",
+      contactsLabel: "For any queries",
+      back: "Back",
+      starsTitle: "Our Little Stars",
+      starsMessage: "Sending lots of love and blessings\nto Dhiraj & Tanu.",
+      langTitle: "Our Wedding Invitation",
+      baratLine: "The Barat will depart from our residence in Village\u2013Parashi Chaklal, Post\u2013Ropan Chhapra, District\u2013Deoria at 5:30 PM."
+    },
+    hi: {
+      ganesha: "श्री गणेशाय नमः",
+      openingBlessing: "अपने परिवारजनों के आशीर्वाद के साथ",
+      tapToContinue: "ऊपर स्वाइप करें",
+      openMaps: "स्थान देखें",
+      addCalendar: "कैलेंडर में जोड़ें",
+      finalBlessing: "आपकी उपस्थिति हमारे लिए\nइस शुभ अवसर को और भी विशेष बनाएगी।",
+      withLove: "स्नेह सहित,",
+      contactsLabel: "किसी भी जानकारी हेतु संपर्क करें",
+      back: "पीछे",
+      starsTitle: "हमारे नन्हे सितारे",
+      starsMessage: "दूल्हा-दुल्हन को ढेर सारा प्यार\nऔर शुभकामनाएँ।",
+      langTitle: "हमारे विवाह का निमंत्रण",
+      baratLine: "बारात हमारे निवास स्थान ग्राम\u2013परासी चकलाल, पोस्ट\u2013रोपन छपरा, जिला\u2013देवरिया से शाम 5:30 बजे प्रस्थान करेगी।"
+    }
+  }
+};
